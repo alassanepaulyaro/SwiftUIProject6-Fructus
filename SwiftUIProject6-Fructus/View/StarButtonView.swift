@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct StarButtonView: View {
+    
+    @AppStorage("isOnBoarding") var isOnBoarding: Bool?
+
+    
     var body: some View {
         Button(action: {
-            print("Exit the onboarding")
+            isOnBoarding = false
         }) {
             HStack {
                 Text("Start")
